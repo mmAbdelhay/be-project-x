@@ -1,0 +1,24 @@
+const [model_name]Repository = require("../../repositories/[model_name]Repository");
+
+module.exports.index = async (req, res) => {
+    return res.status(200).json({data: await [model_name]Repository.findAll()});
+};
+
+module.exports.show = async (req, res) => {
+    return res.status(200).json({data: req.params.[model_name]});
+};
+
+module.exports.store = async (req, res) => {
+    const data = await [model_name]Repository.insert(req.body.validated);
+    return res.status(201).json({message: "[model_name] created Successfully", data: data});
+};
+
+module.exports.update = async (req, res) => {
+    const data = await [model_name]Repository.update(req.params.[model_name], req.body.validated);
+    return res.status(200).json({message: "[model_name] updated Successfully", data: data});
+};
+
+module.exports.destroy = async (req, res) => {
+    await [model_name]Repository.destroy(req.params.[model_name].id);
+    return res.status(200).json({message: "[model_name] deleted Successfully"});
+};

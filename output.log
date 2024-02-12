@@ -1,0 +1,23 @@
+27-09-2023 11:43:16 [logger.js] [error]: Database selection failed err:  Table 'sern.Books' doesn't exist
+27-09-2023 11:43:47 [logger.js] [error]: Database selection failed err:  Table 'sern.Books' doesn't exist
+27-09-2023 11:43:48 [logger.js] [error]: Database selection failed err:  Table 'sern.Books' doesn't exist
+27-09-2023 11:44:02 [logger.js] [error]: Database selection failed err:  Table 'sern.Books' doesn't exist
+27-09-2023 11:44:22 [logger.js] [error]: Database selection failed err:  Table 'sern.Books' doesn't exist
+27-09-2023 11:46:49 [logger.js] [error]: Database Selection failed err:  The attributes option must be an array of column names or an object
+27-09-2023 11:48:31 [logger.js] [error]: Database Selection failed err:  The attributes option must be an array of column names or an object
+27-09-2023 11:48:58 [logger.js] [error]: Database Selection failed err:  The attributes option must be an array of column names or an object
+27-09-2023 11:49:20 [logger.js] [error]: Database Selection failed err:  The attributes option must be an array of column names or an object
+27-09-2023 11:49:22 [logger.js] [error]: Database Selection failed err:  The attributes option must be an array of column names or an object
+27-09-2023 11:49:36 [logger.js] [error]: Database Selection failed err:  The attributes option must be an array of column names or an object
+
+05-02-2024 15:22:22 [logger.js] [error]: Database Insertion failed err:  Cannot access 'user' before initialization
+05-02-2024 15:25:51 [logger.js] [error]: Database Insertion failed err:  Cannot access 'user' before initialization
+06-02-2024 15:47:18 [logger.js] [error]: Database Insertion failed err:  Cannot read properties of undefined (reading 'userId')
+06-02-2024 16:41:27 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function
+06-02-2024 16:41:27 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function
+06-02-2024 16:42:47 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function
+06-02-2024 16:42:47 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function
+06-02-2024 16:43:25 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function
+06-02-2024 16:43:25 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function
+06-02-2024 16:43:39 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function
+06-02-2024 16:43:39 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function

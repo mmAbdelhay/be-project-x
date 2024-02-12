@@ -1,0 +1,63 @@
+paths:
+  /environments:
+    get:
+      summary: Get a list of environments
+      description: Retrieve a list of all environments.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+    post:
+      summary: Create a new Environment
+      description: Create a new Environment with the provided data.
+      requestBody:
+        required: true
+        content:
+          application/json:
+      responses:
+        '201':
+          description: Environment created successfully
+          content:
+            application/json:
+
+  /environments/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        description: ID of the Environment to retrieve or update
+    get:
+      summary: Get a Environment by ID
+      description: Retrieve a Environment by their ID.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+        '404':
+          description: User not found
+    put:
+      summary: Update a Environment by ID
+      description: Update a Environment's information by their ID.
+      requestBody:
+        required: true
+        content:
+          application/json:
+      responses:
+        '200':
+          description: Environment updated successfully
+          content:
+            application/json:
+        '404':
+          description: Environment not found
+    delete:
+      summary: Delete a Environment by ID
+      description: Delete a Environment by their ID.
+      responses:
+        '204':
+          description: Environment deleted successfully
+        '404':
+          description: Environment not found

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../FE-project-x/.idea/FE-project-x.iml" filepath="$PROJECT_DIR$/../FE-project-x/.idea/FE-project-x.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SERN.iml" filepath="$PROJECT_DIR$/.idea/SERN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../fe-project-x/.idea/fe-project-x.iml" filepath="$PROJECT_DIR$/../fe-project-x/.idea/fe-project-x.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../react-social-media-app/.idea/react-social-media-app.iml" filepath="$PROJECT_DIR$/../react-social-media-app/.idea/react-social-media-app.iml" />
+    </modules>
+  </component>
+</project>
