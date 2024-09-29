@@ -1,38 +1,47 @@
-'use strict';
-const {Model} = require('sequelize');
-const {authMiddleware} = require("../../middlewares/authMiddleware");
+"use strict";
+const { Model } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
-    class Project extends Model {
-        /**
-         * Helper method for defining associations.
-         * This method is not a part of Sequelize lifecycle.
-         * The `models/index` file will call this method automatically.
-         */
-        static associate(models) {
-            Project.belongsTo(models.User, {foreignKey: 'userId'});
-            Project.belongsTo(models.Environment, {foreignKey: 'environmentId'});
-        }
+  class Project extends Model {
+    static associate(models) {
+      Project.belongsTo(models.User, { foreignKey: "userId" });
+      Project.belongsTo(models.Environment, { foreignKey: "environmentId" });
     }
+  }
 
-    Project.init({
-        name: {
-            type: DataTypes.STRING,
+  Project.init(
+    {
+      name: DataTypes.STRING,
+      githubUsername: DataTypes.STRING,
+      githubEmail: DataTypes.STRING,
+      haveBackend: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
+    },
+    {
+      hooks: {
+        afterCreate: async (project, options) => {
+          await sequelize.models.AuditLog.create({
+            modelName: "Project",
+            action: "CREATE",
+            data: project.dataValues,
+            causerId: globalUserId,
+          });
         },
-        githubUsername: {
-            type: DataTypes.STRING,
+        afterDestroy: async (project, options) => {
+          await sequelize.models.AuditLog.create({
+            modelName: "Project",
+            action: "DELETE",
+            data: project.dataValues,
+            causerId: globalUserId,
+          });
         },
-        githubEmail: {
-            type: DataTypes.STRING,
-        },
-        haveBackend: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: false
-        }
-    }, {
-        sequelize,
-        modelName: 'Project',
-    });
+      },
+      sequelize,
+      modelName: "Project",
+    }
+  );
 
-    return Project;
+  return Project;
 };

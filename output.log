@@ -21,3 +21,12 @@
 06-02-2024 16:43:25 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function
 06-02-2024 16:43:39 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function
 06-02-2024 16:43:39 [logger.js] [error]: Database Selection failed err:  db.Project.findBy is not a function
+23-08-2024 23:19:41 [logger.js] [error]: Database item Destruction failed err:  AuditLog is not defined
+23-08-2024 23:20:40 [logger.js] [error]: Database Insertion failed err:  instance is not defined
+23-08-2024 23:22:18 [logger.js] [error]: Database item Destruction failed err:  instance is not defined
+23-08-2024 23:25:45 [logger.js] [error]: Database Insertion failed err:  Incorrect integer value: 'Project environment' for column 'environmentId' at row 1
+23-08-2024 23:26:59 [logger.js] [error]: Database Insertion failed err:  Cannot read properties of undefined (reading 'causerId')
+23-08-2024 23:28:57 [logger.js] [error]: Database item Destruction failed err:  Cannot read properties of undefined (reading 'create')
+23-08-2024 23:30:52 [logger.js] [error]: Database Insertion failed err:  Cannot read properties of undefined (reading 'causerId')
+23-08-2024 23:33:45 [logger.js] [error]: Database item Destruction failed err:  Cannot read properties of undefined (reading 'create')
+23-08-2024 23:37:56 [logger.js] [error]: Database Insertion failed err:  Incorrect integer value: 'Project environment' for column 'environmentId' at row 1

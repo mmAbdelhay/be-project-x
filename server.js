@@ -45,10 +45,6 @@ fs.readdirSync("./routes/").forEach(function (file) {
   require("./routes/" + file)(userApp);
 });
 
-userApp.use((req, res, next) => {
-  return res.status(404).json({ error: `${req.url} not found in this server` });
-});
-
 DB.connectToDB()
   .then(() => {
     adminApp.listen(adminPort, () =>
